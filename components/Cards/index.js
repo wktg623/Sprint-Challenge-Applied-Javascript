@@ -20,40 +20,262 @@
 
 
 
-function createCard(newCard){
-    const divCard = document.createElement('div');
-    const divHeadline = document.createElement('div');
-    const divAuthor = document.createElement('div');
-    const divImg = document.createElement('div');
-    const imgAuthor = document.createElement('img');
-    const spanAuthor = document.createElement('span');
+// function createCard(newCard){
+//     const divCard = document.createElement('div');
+//     const divHeadline = document.createElement('div');
+//     const divAuthor = document.createElement('div');
+//     const divImg = document.createElement('div');
+//     const imgAuthor = document.createElement('img');
+//     const spanAuthor = document.createElement('span');
 
 
-    divCard.classList.add('card');
-    divHeadline.classList.add('headline');
-    divAuthor.classList.add('author');
-    divImg.classList.add("img-container");
+//     divCard.classList.add('card');
+//     divHeadline.classList.add('headline');
+//     divAuthor.classList.add('author');
+//     divImg.classList.add("img-container");
 
-    divCard.appendChild(divHeadline);
-    divCard.appendChild(divAuthor);
-    divAuthor.appendChild(divImg);
-    divImg.appendChild(imgAuthor);
-    divCard.appendChild(spanAuthor);
+//     divCard.appendChild(divHeadline);
+//     divCard.appendChild(divAuthor);
+//     divAuthor.appendChild(divImg);
+//     divImg.appendChild(imgAuthor);
+//     divCard.appendChild(spanAuthor);
 
-    divHeadline.textContent = newCard.headline;
-    divImg.src = newCard["authorPhoto"];
-    spanAuthor.textContent = newCard.author;
+//     divHeadline.textContent = "afafka;";
+//     //divImg.src = newCard["authorPhoto"];
+//     spanAuthor.textContent = "afakjdkjafkfa"
 
+//     return newCard;
 
-}
+// }
+const articlesDiv = document.querySelector('.cards-container');
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
-.then(response => {
-    console.log(response)
-const articlesDiv = document.querySelector('.cards-container');
-response.articles.forEach(item => articlesDiv.append(createCard(item)))
+.then(res => {
+    console.log(res);
+    //console.log(response.data.articles)
+    const articlesArray = res.data.articles.javascript;
+    console.log(articlesArray);
+
+   
+ res.data.articles.javascript.forEach(article => {
+
+
+//let y = Object.keys(articlesArray);
+//y.forEach(el => articlesDiv.append(createCard(el)));
+const divCard = document.createElement('div');
+const divHeadline = document.createElement('div');
+const divAuthor = document.createElement('div');
+const divImg = document.createElement('div');
+const imgAuthor = document.createElement('img');
+const spanAuthor = document.createElement('span');
+
+
+divCard.classList.add('card');
+divHeadline.classList.add('headline');
+divAuthor.classList.add('author');
+divImg.classList.add("img-container");
+
+divCard.appendChild(divHeadline);
+divCard.appendChild(divAuthor);
+divAuthor.appendChild(divImg);
+divImg.appendChild(imgAuthor);
+divCard.appendChild(spanAuthor);
+articlesDiv.appendChild(divCard);
+
+divHeadline.textContent = article.headline;
+imgAuthor.src = article.authorPhoto;
+spanAuthor.textContent = article.authorName;
 
 })
+
+})
+
+.catch(error => {
+        console.log(error)
+
+});
+
+
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+.then(res => {
+    console.log(res);
+    //console.log(response.data.articles)
+    const articlesArray = res.data.articles.bootstrap;
+    console.log(articlesArray);
+
+   
+ res.data.articles.bootstrap.forEach(article => {
+
+
+//let y = Object.keys(articlesArray);
+//y.forEach(el => articlesDiv.append(createCard(el)));
+const divCard = document.createElement('div');
+const divHeadline = document.createElement('div');
+const divAuthor = document.createElement('div');
+const divImg = document.createElement('div');
+const imgAuthor = document.createElement('img');
+const spanAuthor = document.createElement('span');
+
+
+divCard.classList.add('card');
+divHeadline.classList.add('headline');
+divAuthor.classList.add('author');
+divImg.classList.add("img-container");
+
+divCard.appendChild(divHeadline);
+divCard.appendChild(divAuthor);
+divAuthor.appendChild(divImg);
+divImg.appendChild(imgAuthor);
+divCard.appendChild(spanAuthor);
+articlesDiv.appendChild(divCard);
+
+divHeadline.textContent = article.headline;
+imgAuthor.src = article.authorPhoto;
+spanAuthor.textContent = article.authorName;
+
+})
+
+})
+
+.catch(error => {
+        console.log(error)
+
+});
+
+
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+.then(res => {
+    console.log(res);
+    //console.log(response.data.articles)
+    const articlesArray = res.data.articles.technology;
+    console.log(articlesArray);
+
+   
+ res.data.articles.technology.forEach(article => {
+
+
+//let y = Object.keys(articlesArray);
+//y.forEach(el => articlesDiv.append(createCard(el)));
+const divCard = document.createElement('div');
+const divHeadline = document.createElement('div');
+const divAuthor = document.createElement('div');
+const divImg = document.createElement('div');
+const imgAuthor = document.createElement('img');
+const spanAuthor = document.createElement('span');
+
+
+divCard.classList.add('card');
+divHeadline.classList.add('headline');
+divAuthor.classList.add('author');
+divImg.classList.add("img-container");
+
+divCard.appendChild(divHeadline);
+divCard.appendChild(divAuthor);
+divAuthor.appendChild(divImg);
+divImg.appendChild(imgAuthor);
+divCard.appendChild(spanAuthor);
+articlesDiv.appendChild(divCard);
+
+divHeadline.textContent = article.headline;
+imgAuthor.src = article.authorPhoto;
+spanAuthor.textContent = article.authorName;
+
+})
+
+})
+
+.catch(error => {
+        console.log(error)
+
+});
+
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+.then(res => {
+    console.log(res);
+    //console.log(response.data.articles)
+    const articlesArray = res.data.articles.jquery;
+    console.log(articlesArray);
+
+   
+ res.data.articles.jquery.forEach(article => {
+
+
+//let y = Object.keys(articlesArray);
+//y.forEach(el => articlesDiv.append(createCard(el)));
+const divCard = document.createElement('div');
+const divHeadline = document.createElement('div');
+const divAuthor = document.createElement('div');
+const divImg = document.createElement('div');
+const imgAuthor = document.createElement('img');
+const spanAuthor = document.createElement('span');
+
+
+divCard.classList.add('card');
+divHeadline.classList.add('headline');
+divAuthor.classList.add('author');
+divImg.classList.add("img-container");
+
+divCard.appendChild(divHeadline);
+divCard.appendChild(divAuthor);
+divAuthor.appendChild(divImg);
+divImg.appendChild(imgAuthor);
+divCard.appendChild(spanAuthor);
+articlesDiv.appendChild(divCard);
+
+divHeadline.textContent = article.headline;
+imgAuthor.src = article.authorPhoto;
+spanAuthor.textContent = article.authorName;
+
+})
+
+})
+
+.catch(error => {
+        console.log(error)
+
+});
+
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+.then(res => {
+    console.log(res);
+    //console.log(response.data.articles)
+    const articlesArray = res.data.articles['node'];
+    console.log(articlesArray);
+
+   
+ res.data.articles.node.forEach(article => {
+
+console.log(res)
+//let y = Object.keys(articlesArray);
+//y.forEach(el => articlesDiv.append(createCard(el)));
+const divCard = document.createElement('div');
+const divHeadline = document.createElement('div');
+const divAuthor = document.createElement('div');
+const divImg = document.createElement('div');
+const imgAuthor = document.createElement('img');
+const spanAuthor = document.createElement('span');
+
+
+divCard.classList.add('card');
+divHeadline.classList.add('headline');
+divAuthor.classList.add('author');
+divImg.classList.add("img-container");
+
+divCard.appendChild(divHeadline);
+divCard.appendChild(divAuthor);
+divAuthor.appendChild(divImg);
+divImg.appendChild(imgAuthor);
+divCard.appendChild(spanAuthor);
+articlesDiv.appendChild(divCard);
+
+divHeadline.textContent = article.headline;
+imgAuthor.src = article.authorPhoto;
+spanAuthor.textContent = article.authorName;
+
+})
+
+})
+
 .catch(error => {
         console.log(error)
 
